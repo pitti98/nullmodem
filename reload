@@ -1,0 +1,4 @@
+#!/bin/sh
+sudo rmmod nullmodem
+sudo insmod nullmodem.ko
+sudo chmod a+rw /dev/nmp*
