@@ -1,5 +1,16 @@
 This implements a virtual nullmodem driver for linux as a kernel module.
 
+I wrote this when I needed a real virtual nullmodem emulator that could emulate the control lines and
+handle ioctl() calls for TIOCMIWAIT like a real hardware device.
+
+I found the tty0tty project on sourceforge but it did not do what I needed,
+so I took it as a basis and started hacking.
+
+I also posted a response on stackoverflow where someone asked for a nullmodem emulator:
+http://stackoverflow.com/questions/52187/virtual-serial-port-for-linux
+
+Introduction:
+
 When the module is loaded, pairs of virtual COM ports are created that are connected to each other.
 The name of the devices are /dev/nmpX, where X is the number of the COM port. "nmp" stands for "null modem port".
 
